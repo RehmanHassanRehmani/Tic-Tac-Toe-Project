@@ -15,7 +15,7 @@ int main()
 
     srand(time(0));
 
-    cout << "===== TIC TAC TOE =====" << endl;
+    cout << " TIC TAC TOE " << endl;
 
     cout << "Choose your mark (X or O): ";
     cin >> playerMark;
