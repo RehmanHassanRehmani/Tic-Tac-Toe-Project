@@ -12,10 +12,24 @@ int main()
     char computerMark;
     char winner = ' ';
     char currentTurn;
+    int difficultyLevel;
 
     srand(time(0));
 
-    cout << " TIC TAC TOE " << endl;
+    cout << "===== TIC TAC TOE =====" << endl;
+
+    cout << "Choose difficulty level:" << endl;
+    cout << "1. Easy" << endl;
+    cout << "2. Medium" << endl;
+    cout << "3. Hard" << endl;
+    cout << "Enter your choice: ";
+    cin >> difficultyLevel;
+
+    while (difficultyLevel < 1 || difficultyLevel > 3)
+    {
+        cout << "Please choose 1, 2 or 3: ";
+        cin >> difficultyLevel;
+    }
 
     cout << "Choose your mark (X or O): ";
     cin >> playerMark;
@@ -46,15 +60,7 @@ int main()
     }
 
     initializeBoard(board);
-
-    if (playerMark == 'X')
-    {
-        currentTurn = 'X';
-    }
-    else
-    {
-        currentTurn = 'X';
-    }
+    currentTurn = 'X';
 
     cout << endl << "You are playing as " << playerMark << endl;
     cout << "Computer is playing as " << computerMark << endl;
@@ -73,7 +79,7 @@ int main()
         else
         {
             cout << "Computer's turn." << endl;
-            computerMove(board, computerMark);
+            computerMove(board, computerMark, playerMark, difficultyLevel);
             currentTurn = playerMark;
         }
 
