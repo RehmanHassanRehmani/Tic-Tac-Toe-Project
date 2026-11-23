@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="libraries">
+      <UniqueIdentifier>{991a04be-90fe-4d81-88f4-5fdf76460ae4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,10 +24,22 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="difficulty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
-      <Filter>Resource Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="difficulty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="libraries.txt">
+      <Filter>libraries</Filter>
+    </Text>
   </ItemGroup>
 </Project>
