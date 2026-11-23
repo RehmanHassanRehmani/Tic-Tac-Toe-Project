@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cstdlib>
 #include "game.h"
+#include "difficulty.h"
 
 using namespace std;
 
@@ -77,27 +77,9 @@ void playerMove(char board[3][3], char playerMark)
     }
 }
 
-void computerMove(char board[3][3], char computerMark)
+void computerMove(char board[3][3], char computerMark, char playerMark, int difficultyLevel)
 {
-    int position;
-    int row;
-    int col;
-
-    while (true)
-    {
-        position = rand() % 9 + 1;
-
-        row = (position - 1) / 3;
-        col = (position - 1) % 3;
-
-        if (board[row][col] == ' ')
-        {
-            board[row][col] = computerMark;
-            cout << "Computer placed " << computerMark << " at position "
-                << position << endl;
-            break;
-        }
-    }
+    makeComputerMove(board, computerMark, playerMark, difficultyLevel);
 }
 
 char checkWinner(char board[3][3])

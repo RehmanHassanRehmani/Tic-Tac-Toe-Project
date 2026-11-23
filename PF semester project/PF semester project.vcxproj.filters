@@ -21,10 +21,22 @@
     <ClCompile Include="game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="difficulty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="difficulty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreboard.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
