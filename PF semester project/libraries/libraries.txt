@@ -1,0 +1,32 @@
+Libraries used in this project
+==============================
+
+1. SFML (Simple and Fast Multimedia Library)
+   Version  : 2.6.1
+   Website  : https://www.sfml-dev.org
+   Source   : https://github.com/SFML/SFML
+   License  : zlib/png license
+   Modules  : sfml-graphics, sfml-window, sfml-system, sfml-audio
+   Used for : creating the window, drawing the menu, board and buttons,
+              handling mouse and keyboard input, and playing sound effects
+
+   How it is obtained
+   ------------------
+   SFML is not stored inside this folder. CMake downloads version 2.6.1 from
+   GitHub automatically during configuration (see CMakeLists.txt,
+   FetchContent_Declare) and builds it as a static library inside the
+   "out/build" folder. No manual installation is needed. Git and an internet
+   connection are required for the first build.
+
+2. OpenAL Soft (comes bundled with SFML)
+   File     : openal32.dll
+   Used for : audio playback by the sfml-audio module
+   Note     : CMakeLists.txt copies it automatically next to tic_tac_toe.exe
+              after every build.
+
+3. C++ Standard Library
+   Used for : strings, input/output, file reading and writing (scoreboard),
+              random numbers (computer moves)
+sounds
+sound files used by the game are in the "assets" folder
+(assets/sounds/click.wav, win.wav, lose.wav, draw.wav).
