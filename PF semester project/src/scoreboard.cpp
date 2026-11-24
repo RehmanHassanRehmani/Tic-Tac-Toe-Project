@@ -2,7 +2,6 @@
 #include <cstdio>
 #include <cstring>
 #include <cctype>
-
 static void normalizeName(const char* source, char* destination)
 {
 	int output = 0;
@@ -21,7 +20,6 @@ static void normalizeName(const char* source, char* destination)
 	destination[output] = '\0';
 	if (destination[0] == '\0') std::strcpy(destination, "Player");
 }
-
 void loadScoreboard(char names[][40], int games[], int wins[], int losses[], int draws[], int* count)
 {
 	FILE* file = std::fopen("scoreboard.txt", "r");
@@ -54,7 +52,6 @@ void loadScoreboard(char names[][40], int games[], int wins[], int losses[], int
 	}
 	std::fclose(file);
 }
-
 void saveScoreboard(char names[][40], int games[], int wins[], int losses[], int draws[], int count)
 {
 	FILE* file = std::fopen("scoreboard.tmp", "w");
@@ -66,7 +63,6 @@ void saveScoreboard(char names[][40], int games[], int wins[], int losses[], int
 	std::remove("scoreboard.txt");
 	std::rename("scoreboard.tmp", "scoreboard.txt");
 }
-
 int findPlayer(char names[][40], int count, const char* name)
 {
 	int i;
@@ -74,7 +70,6 @@ int findPlayer(char names[][40], int count, const char* name)
 		if (std::strcmp(names[i], name) == 0) return i;
 	return -1;
 }
-
 void recordResult(char names[][40], int games[], int wins[], int losses[], int draws[], int* count, const char* name, int result)
 {
 	char safeName[40];

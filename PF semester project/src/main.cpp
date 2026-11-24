@@ -8,14 +8,12 @@
 #include "scoreboard.h"
 #include "gui.h"
 #include "audio.h"
-
 static int hit(sf::RenderWindow* window, float left, float top, float width, float height)
 {
 	sf::Vector2i mouse = sf::Mouse::getPosition(*window);
 	sf::Vector2f point = window->mapPixelToCoords(mouse);
 	return sf::FloatRect(left, top, width, height).contains(point);
 }
-
 static void resetGame(char board[3][3], char& winner, char& turn, int& computerWaiting, char* message, char playerMark, sf::Clock& computerClock)
 {
 	initializeBoard(board);
@@ -66,8 +64,7 @@ int main()
 	loadScoreboard(names, games, wins, losses, draws, &playerCount);
 	loadGameFont(&font);
 	loadAudio();
-
-	while (window.isOpen())
+    while (window.isOpen())
 	{
 		sf::Event event;
 		while (window.pollEvent(event))

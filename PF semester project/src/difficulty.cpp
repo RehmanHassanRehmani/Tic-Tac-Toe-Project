@@ -1,7 +1,6 @@
 #include "difficulty.h"
 #include "game.h"
 #include <cstdlib>
-
 static int scoreBoard(char board[3][3], char computer, char player, bool computerTurn)
 {
 	char winner = checkWinner(board);
@@ -29,7 +28,6 @@ static int scoreBoard(char board[3][3], char computer, char player, bool compute
 	}
 	return best;
 }
-
 static int winningMove(char board[3][3], char mark, int* resultRow, int* resultColumn)
 {
 	for (int row = 0; row < 3; ++row)
@@ -52,7 +50,6 @@ static int winningMove(char board[3][3], char mark, int* resultRow, int* resultC
 	}
 	return 0;
 }
-
 void makeComputerMove(char board[3][3], char computerMark, char playerMark, int difficulty)
 {
 	int row = -1;
